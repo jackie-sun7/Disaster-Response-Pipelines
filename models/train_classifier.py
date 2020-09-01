@@ -63,6 +63,7 @@ def tokenize(text):
     sentences = sent_tokenize(text)
     
     for sent in sentences:
+        #remove special characters and numbers
         sent = re.sub("[^a-zA-Z]", " ", sent)
         tokens = word_tokenize(sent)
         # get each token's part of speech
